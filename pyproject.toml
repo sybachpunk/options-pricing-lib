@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61", "wheel", "pybind11>=2.11"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "options_pricing"
+version = "0.1.0"
+description = "From-scratch options pricing library: BSM, CRR binomial, Monte Carlo, Greeks. Python + C++ (pybind11)."
+requires-python = ">=3.10"
+authors = [{name = "Quant Portfolio"}]
+license = {text = "MIT"}
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "matplotlib>=3.7",
+    "pandas>=2.0",
+    "jupyter>=1.0",
+    "ipykernel>=6.25",
+]
+api = [
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.27",
+    "pydantic>=2.5",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
