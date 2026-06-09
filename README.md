@@ -1,6 +1,6 @@
-# Options Pricing Library — from scratch
+# Options Pricing Library
 
-A from-scratch implementation of the three canonical European option pricing methods:
+An implementation of the three canonical European option pricing methods:
 
 - **Black-Scholes-Merton** closed form with analytical Greeks
 - **Cox-Ross-Rubinstein binomial tree** with European and American exercise
